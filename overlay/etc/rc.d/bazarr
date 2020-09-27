@@ -36,7 +36,7 @@ load_rc_config $name
 pidfile="${bazarr_data_dir}/bazarr.pid"
 command="/usr/sbin/daemon"
 procname="/usr/local/bin/python3"
-command_args="-f -p ${pidfile} ${procname} /usr/local/share/bazarr/bazarr.py"
+command_args="-f -p ${pidfile} ${procname} /usr/local/share/bazarr/bazarr.py --config ${bazarr_data_dir}"
 
 start_precmd=bazarr_precmd
 bazarr_precmd()
