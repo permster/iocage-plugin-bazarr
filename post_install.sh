@@ -2,6 +2,7 @@
 
 # Download latest v3 release
 fetch $(curl -s https://api.github.com/repos/morpheus65535/bazarr/releases/latest | grep tarball_url | cut -d '"' -f 4) -o /usr/local/share/tmp.tar.gz
+mkdir -p /usr/local/share/bazarr
 tar -xzvf /usr/local/share/tmp.tar.gz -C /usr/local/share/bazarr --strip-components=1
 rm /usr/local/share/tmp.tar.gz
 
