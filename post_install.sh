@@ -1,10 +1,7 @@
 #!/bin/sh
 
 # Download latest v3 release
-fetch $(curl -s https://api.github.com/repos/morpheus65535/bazarr/releases/latest | grep tarball_url | cut -d '"' -f 4) -o /usr/local/share/tmp.tar.gz
-mkdir -p /usr/local/share/bazarr
-tar -xzvf /usr/local/share/tmp.tar.gz -C /usr/local/share/bazarr --strip-components=1
-rm /usr/local/share/tmp.tar.gz
+git clone https://github.com/morpheus65535/bazarr.git /usr/local/share/bazarr
 
 # install required pip packages
 yes | pip-3.7 install -r /usr/local/share/bazarr/requirements.txt
