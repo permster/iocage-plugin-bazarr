@@ -51,7 +51,7 @@ bazarr_precmd()
 
 bazarr_postcmd()
 {
-	killall -u ${bazarr_user}
+	killall -u ${bazarr_user} -9
 }
 
 run_rc_command "$1"

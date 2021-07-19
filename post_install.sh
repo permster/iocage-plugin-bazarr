@@ -4,10 +4,10 @@
 git clone https://github.com/morpheus65535/bazarr.git /usr/local/share/bazarr
 
 # install required pip packages
-yes | pip-3.7 install -r /usr/local/share/bazarr/requirements.txt
+yes | python3 -m pip install -r /usr/local/share/bazarr/requirements.txt
 
 # Create user
-pw user add bazarr -c bazarr -u 1056 -d /nonexistent -s /usr/bin/nologin
+pw user add bazarr -c bazarr -u 1056 -s /sbin/nologin -w no
 
 # make "bazarr" the owner of the install location
 mkdir /config
